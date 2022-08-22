@@ -2,5 +2,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('music_library/', views.song_list)
+    path('', views.songs_list),
+    path('<int:pk>/', views.song_by_id)
 ]
